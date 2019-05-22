@@ -1,0 +1,12 @@
+<h1>Create a new Review</h1>
+
+<div class="container d-flex justify-content-center">
+  <div class="col-12 col-lg-6 mt-5">
+    <%= simple_form_for([@restaurant, @review]) do |f| %>
+      <%= f.input :content, placeholder: :content %>
+      <%= f.input :rating, :collection => %w[0 1 2 3 4 5] %>
+      <%= f.button :submit, class: 'btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>
+

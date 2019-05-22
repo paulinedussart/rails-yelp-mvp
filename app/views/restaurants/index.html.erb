@@ -1,0 +1,14 @@
+<h1>Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+
+<div class="card d-flex justify-content-arround" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= restaurant.category %></h6>
+    <p class="card-text"><%= restaurant.phone_number %> </p>
+    <p class="card-text"> <%= restaurant.address %></p>
+    <%= link_to "See details", restaurant_path(restaurant.id), class: "btn btn-primary" %>
+    <%= link_to "Add Restaurant", new_restaurant_path(restaurant.id), class: "btn btn-wwarning" %>
+  </div>
+</div>
+<% end %>
